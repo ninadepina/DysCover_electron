@@ -13,6 +13,6 @@ window.addEventListener('DOMContentLoaded', () => {
 	};
 
 	for (const type of ['chrome', 'node', 'electron'] as const) {
-		replaceText(`${type}-version`, process.versions[type]);
+		replaceText(`${type}-version`, process.versions[type] || 'unknown');
 	}
 });
