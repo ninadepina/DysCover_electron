@@ -1,21 +1,14 @@
 {
-  "name": "electron-quick-start",
+  "name": "dyscover",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "a dyslexia friendly web browser",
   "main": "dist/main.js",
   "scripts": {
     "start": "npm run build && electron .",
     "build": "tsc"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
+  "repository": "https://github.com/ninadepina/DysCover",
+  "author": "ninadepina",
   "license": "CC0-1.0",
   "devDependencies": {
     "@types/electron": "^1.6.10",
