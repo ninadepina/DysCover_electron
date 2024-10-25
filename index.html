@@ -7,6 +7,9 @@
 			content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'" />
 		<link href="./public/styles/style.css" rel="stylesheet" />
 		<title>DysCover</title>
+		
+		<script src="./renderer.js"></script>
+		<script src="./public/scripts/script.js" type="module"></script>
 	</head>
 	<body>
 		<header>
@@ -16,10 +19,8 @@
 				<button class="nav__button nav__button--reload">r</button>
 			</div>
 		</header>
-
+		
 		<webview src="https://www.google.com"></webview>
-
-		<script src="./renderer.ts"></script>
-		<script src="./public/scripts/script.ts"></script>
+		
 	</body>
 </html>

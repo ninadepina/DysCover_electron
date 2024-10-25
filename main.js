@@ -1,5 +1,9 @@
 import { app, BrowserWindow, screen } from 'electron';
-import * as path from 'path';
+import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const createWindow = () => {
 	const { width, height } = screen.getPrimaryDisplay().workAreaSize;
@@ -10,7 +14,7 @@ const createWindow = () => {
 		width: 800,
 		height: 600,
 		webPreferences: {
-			preload: path.join(__dirname, 'preload.js'),
+			preload: path.join(__dirname, 'preload.cjs'),
 			nodeIntegration: true,
 			contextIsolation: false,
 			webviewTag: true
