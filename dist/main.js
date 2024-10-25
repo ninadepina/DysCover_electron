@@ -23,27 +23,23 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-// main.ts
 const electron_1 = require("electron");
 const path = __importStar(require("path"));
 const createWindow = () => {
     const { width, height } = electron_1.screen.getPrimaryDisplay().workAreaSize;
-    // Create the browser window.
     const mainWindow = new electron_1.BrowserWindow({
         // width: width || 800,
         // height: height || 600,
         width: 800,
         height: 600,
         webPreferences: {
-            preload: path.join(__dirname, 'preload.ts'),
+            preload: path.join(__dirname, 'preload.js'),
             nodeIntegration: true,
             contextIsolation: false,
             webviewTag: true
         }
     });
-    // and load the index.html of the app.
     mainWindow.loadFile('index.html');
-    // Open the DevTools.
     // mainWindow.webContents.openDevTools();
 };
 // This method will be called when Electron has finished

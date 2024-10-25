@@ -7,7 +7,7 @@
  * https://www.electronjs.org/docs/latest/tutorial/sandbox
  */
 window.addEventListener('DOMContentLoaded', function () {
-	var replaceText = function (selector: string, text: string) {
+	var replaceText = function (selector, text) {
 		var element = document.getElementById(selector);
 		if (element) element.innerText = text;
 	};
