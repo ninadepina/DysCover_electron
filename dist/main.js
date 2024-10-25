@@ -26,9 +26,12 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // main.ts
 const electron_1 = require("electron");
 const path = __importStar(require("path"));
-function createWindow() {
+const createWindow = () => {
+    const { width, height } = electron_1.screen.getPrimaryDisplay().workAreaSize;
     // Create the browser window.
     const mainWindow = new electron_1.BrowserWindow({
+        // width: width || 800,
+        // height: height || 600,
         width: 800,
         height: 600,
         webPreferences: {
@@ -42,7 +45,7 @@ function createWindow() {
     mainWindow.loadFile('index.html');
     // Open the DevTools.
     // mainWindow.webContents.openDevTools();
-}
+};
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 // Some APIs can only be used after this event occurs.
