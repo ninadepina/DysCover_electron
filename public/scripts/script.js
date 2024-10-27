@@ -37,3 +37,14 @@ zoomOutButton.addEventListener('click', () => {
 	webview.setZoomLevel(currentZoomLevel);
 	updateZoomPercentage(currentZoomLevel);
 });
+
+const searchButton = document.querySelector('#search-button');
+const urlInput = document.querySelector('#url-input');
+
+const hasScheme = (url) => url.startsWith('http://') || url.startsWith('https://');
+
+searchButton.addEventListener('click', () => {
+	let url = urlInput.value;
+	if (!hasScheme(url)) url = 'http://' + url;
+	webview.src = url;
+});
