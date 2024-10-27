@@ -7,20 +7,28 @@
 			content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'" />
 		<link href="./public/styles/style.css" rel="stylesheet" />
 		<title>DysCover</title>
-		
+
 		<script src="./renderer.js"></script>
 		<script src="./public/scripts/script.js" type="module"></script>
 	</head>
 	<body>
 		<header>
-			<nav class="nav">
+			<div>
 				<button class="nav__button nav__button--back"><</button>
 				<button class="nav__button nav__button--forward">></button>
 				<button class="nav__button nav__button--reload">r</button>
 			</div>
+
+			<div class="options">
+				<div class="options__button options__button--zoom">
+					<button class="zoom zoom--out">-</button>
+					<span class="zoom zoom--percent">100%</span>
+					<button class="zoom zoom--in">+</button>
+				</div>
+				<button class="options__button options__button--color">color</button>
+			</div>
 		</header>
-		
-		<webview src="https://www.google.com"></webview>
-		
+
+		<webview id="webview" src="https://www.google.com"></webview>
 	</body>
 </html>
