@@ -13,25 +13,37 @@
 	</head>
 	<body>
 		<header>
-			<div>
-				<button class="nav__button nav__button--back"><</button>
-				<button class="nav__button nav__button--forward">></button>
-				<button class="nav__button nav__button--reload">r</button>
-			</div>
+			<section class="options">
+				<article class="option">
+					<button class="option-button">
+						<!-- svg here -->
+						<p>Zoom</p>
+					</button>
+				</article>
 
-			<div class="options">
-				<div class="options__button options__button--zoom">
-					<button class="zoom zoom--out">-</button>
-					<span class="zoom zoom--percent">100%</span>
-					<button class="zoom zoom--in">+</button>
-				</div>
-				<button class="options__button options__button--color">color</button>
-			</div>
+				<div class="divider"></div>
 
-			<div class="search-bar">
-				<input type="text" id="url-input" placeholder="Enter URL" />
-				<button id="search-button">Go</button>
-			</div>
+				<article class="option">
+					<button class="option-button">
+						<!-- svg here -->
+						<p>Font</p>
+					</button>
+				</article>
+
+				<article class="option">
+					<button class="option-button">
+						<!-- svg here -->
+						<p>Contrast</p>
+					</button>
+				</article>
+
+				<article class="option">
+					<button class="option-button">
+						<!-- svg here -->
+						<p>Text-to-speech</p>
+					</button>
+				</article>
+			</section>
 		</header>
 
 		<webview id="webview" src="https://www.google.com"></webview>

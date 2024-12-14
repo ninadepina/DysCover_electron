@@ -1,3 +1,8 @@
+@font-face {
+	font-family: Inter;
+	src: url('./public/assets/Inter.ttf') format('truetype');
+}
+
 *,
 *::after,
 *::before {
@@ -15,13 +20,76 @@
 	color: inherit;
 }
 
+:root {
+	--font-family: Inter, 'Arial', sans-serif;
+	--font-size: 0.875rem;
+	--font-weight: 400;
+	--primary-color: #07080f;
+	--secondary-color: #ffffff;
+	--tertiary-color: #e4e6eb;
+}
+
 html,
 body {
 	height: 100%;
+	font-family: var(--font-family);
+	font-size: var(--font-size);
+	font-weight: var(--font-weight);
+}
+
+p,
+span,
+button {
+	color: inherit;
+	font-weight: inherit;
+	font-size: inherit;
+	line-height: normal;
+}
+
+button {
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
 }
 
 webview {
 	width: 100%;
 	height: 100%;
 	border: none;
+}
+
+header {
+	width: fit-content;
+	margin: 0.5rem;
+	padding: 0.125rem;
+	float: right;
+	background-color: var(--tertiary-color);
+	border-radius: 4px;
+}
+
+.options {
+	display: flex;
+	gap: 0.5rem;
+	width: fit-content;
+	padding: 0.25rem;
+	background-color: var(--secondary-color);
+	border-radius: 3px;
+}
+
+.option-button {
+	padding: 0.5rem 1rem;
+	/* background-color: var(--secondary-color); */
+	background-color: var(--tertiary-color);
+	border-radius: 3px;
+	transition: background-color 0.2s ease-in-out;
+}
+.option-button:hover {
+	background-color: var(--tertiary-color);
+}
+
+.divider {
+	width: 2px;
+	height: auto;
+	background-color: var(--tertiary-color);
+	border-radius: 50%;
 }
