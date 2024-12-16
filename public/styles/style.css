@@ -63,6 +63,7 @@ webview {
 }
 
 header {
+	position: relative;
 	display: flex;
 	align-items: center;
 	gap: 0.125rem;
@@ -84,8 +85,10 @@ header {
 }
 
 .option {
-	position: relative;
 	display: inline-block;
+}
+.option--rel {
+	position: relative;
 }
 
 .option-button {
@@ -104,8 +107,8 @@ header {
 .option-content {
 	display: none;
 	position: absolute;
-	top: calc(100% + 0.625rem);
-	right: -0.375rem;
+	top: calc(100% + 0.25rem);
+	right: 0;
 	min-width: 24rem;
 	background-color: var(--tertiary-color);
 	border-radius: var(--border-radius);
@@ -116,7 +119,10 @@ header {
 }
 .option-content--left {
 	right: inherit;
-	left: -0.375rem;
+	left: 0;
+}
+.option--rel .option-content {
+	top: calc(100% + 0.625rem);
 }
 
 .divider {

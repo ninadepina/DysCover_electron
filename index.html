@@ -26,7 +26,8 @@
 						<div class="slider">
 							<div class="slider-title">
 								<svg class="svg--zoom">
-									<path d="M5.167 8.833a4.167 4.167 0 1 0 0-8.333 4.167 4.167 0 0 0 0 8.333ZM11 10.5 8.5 8" />
+									<path
+										d="M5.167 8.833a4.167 4.167 0 1 0 0-8.333 4.167 4.167 0 0 0 0 8.333ZM11 10.5 8.5 8" />
 								</svg>
 								<p>Zoom</p>
 							</div>
@@ -40,7 +41,7 @@
 
 				<div class="divider"></div>
 
-				<article class="option">
+				<article class="option option--rel">
 					<button class="option-button">
 						<svg class="svg--font">
 							<path
@@ -48,6 +49,47 @@
 						</svg>
 						<p>Font</p>
 					</button>
+
+					<div class="option-content option-content--left">
+						<div class="slider">
+							<div class="slider-title">
+								<!-- svg here -->
+								<p>Font size</p>
+							</div>
+
+							<input type="range" name="slider-size" id="slider-size" min="1" max="200" value="100" />
+
+							<p class="slider-value"><span>100</span>%</p>
+						</div>
+
+						<div class="slider">
+							<div class="slider-title">
+								<!-- svg here -->
+								<p>Line height</p>
+							</div>
+
+							<input type="range" name="slider-line" id="slider-line" min="1" max="200" value="100" />
+
+							<p class="slider-value"><span>100</span>%</p>
+						</div>
+
+						<div class="slider">
+							<div class="slider-title">
+								<!-- svg here -->
+								<p>Letter spacing</p>
+							</div>
+
+							<input
+								type="range"
+								name="slider-spacing"
+								id="slider-spacing"
+								min="1"
+								max="200"
+								value="100" />
+
+							<p class="slider-value"><span>100</span>%</p>
+						</div>
+					</div>
 				</article>
 
 				<div class="divider"></div>
@@ -64,6 +106,42 @@
 						</svg>
 						<p>Contrast</p>
 					</button>
+
+					<div class="option-content">
+						<div class="slider">
+							<div class="slider-title">
+								<!-- svg here -->
+								<p>Contrast</p>
+							</div>
+
+							<input
+								type="range"
+								name="slider-contrast"
+								id="slider-contrast"
+								min="1"
+								max="200"
+								value="100" />
+
+							<p class="slider-value"><span>100</span>%</p>
+						</div>
+
+						<div class="slider">
+							<div class="slider-title">
+								<!-- svg here -->
+								<p>Saturation</p>
+							</div>
+
+							<input
+								type="range"
+								name="slider-saturation"
+								id="slider-saturation"
+								min="1"
+								max="200"
+								value="100" />
+
+							<p class="slider-value"><span>100</span>%</p>
+						</div>
+					</div>
 				</article>
 
 				<div class="divider"></div>
@@ -78,6 +156,8 @@
 						</svg>
 						<p>Text-to-speech</p>
 					</button>
+
+					<div class="option-content"></div>
 				</article>
 			</section>
 
