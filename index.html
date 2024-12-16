@@ -16,16 +16,36 @@
 			<section class="options">
 				<article class="option">
 					<button class="option-button">
-						<!-- svg here -->
+						<svg class="svg--zoom">
+							<path d="M5.167 8.833a4.167 4.167 0 1 0 0-8.333 4.167 4.167 0 0 0 0 8.333ZM11 10.5 8.5 8" />
+						</svg>
 						<p>Zoom</p>
 					</button>
+
+					<div class="option-content option-content--left">
+						<div class="slider">
+							<div class="slider-title">
+								<svg class="svg--zoom">
+									<path d="M5.167 8.833a4.167 4.167 0 1 0 0-8.333 4.167 4.167 0 0 0 0 8.333ZM11 10.5 8.5 8" />
+								</svg>
+								<p>Zoom</p>
+							</div>
+
+							<input type="range" name="slider-zoom" id="slider-zoom" min="1" max="200" value="100" />
+
+							<p class="slider-value"><span>100</span>%</p>
+						</div>
+					</div>
 				</article>
 
 				<div class="divider"></div>
 
 				<article class="option">
 					<button class="option-button">
-						<!-- svg here -->
+						<svg class="svg--font">
+							<path
+								d="M5 2.75v-2h3.75m3.75 2v-2H8.75m0 0v9.5m0 0H7m1.75 0h1.75m-9.5-4v-1h2m2 1v-1H3m0 0v5m0 0h1m-1 0H2" />
+						</svg>
 						<p>Font</p>
 					</button>
 				</article>
@@ -34,7 +54,14 @@
 
 				<article class="option">
 					<button class="option-button">
-						<!-- svg here -->
+						<svg class="svg--contrast">
+							<mask id="a" fill="#fff"><path d="M5 0a5 5 0 0 1 0 10V0Z" /></mask>
+							<path
+								d="M5-1a6 6 0 0 1 6 6H9a4 4 0 0 0-4-4v-2Zm6 6a6 6 0 0 1-6 6V9a4 4 0 0 0 4-4h2Zm-6 5V0v10ZM5-1a6 6 0 1 1 0 12V9a4 4 0 1 0 0-8v-2Z"
+								fill="#07080F"
+								mask="url(#a)" />
+							<path d="M5 0a5 5 0 0 0 0 10V0Z" fill="#07080F" />
+						</svg>
 						<p>Contrast</p>
 					</button>
 				</article>
@@ -43,11 +70,24 @@
 
 				<article class="option">
 					<button class="option-button">
-						<!-- svg here -->
+						<svg class="svg--tts">
+							<path
+								d="M4.844 10.609H1.96A.96.96 0 0 1 1 9.649V1.96A.96.96 0 0 1 1.96 1h3.845l2.882 2.883v3.805" />
+							<path
+								d="M5.805 1v2.883h2.882M6.765 6.285H2.922M6.765 8.207H2.922M3.883 4.363h-.961M10.061 6.688l-1.887 1.51h-1.51v2.265h1.51l1.887 1.51V6.688ZM13.108 6.662a3.775 3.775 0 0 1 0 5.338m-1.333-4.006a1.888 1.888 0 0 1 0 2.67" />
+						</svg>
 						<p>Text-to-speech</p>
 					</button>
 				</article>
 			</section>
+
+			<button class="settings">
+				<svg class="svg--settings">
+					<path d="M7.5 9.273a1.773 1.773 0 1 0 0-3.546 1.773 1.773 0 0 0 0 3.546Z" />
+					<path
+						d="M11.873 9.273a.975.975 0 0 0 .195 1.075l.035.036a1.182 1.182 0 1 1-1.672 1.672l-.035-.035a.974.974 0 0 0-1.076-.196.975.975 0 0 0-.59.893v.1a1.182 1.182 0 0 1-2.365 0v-.053a.975.975 0 0 0-.638-.892.975.975 0 0 0-1.075.195l-.036.035a1.182 1.182 0 1 1-1.672-1.672l.036-.035a.975.975 0 0 0 .195-1.076.975.975 0 0 0-.893-.59h-.1a1.182 1.182 0 1 1 0-2.365h.053a.975.975 0 0 0 .892-.638.975.975 0 0 0-.195-1.075l-.035-.036a1.182 1.182 0 1 1 1.672-1.672l.036.036a.975.975 0 0 0 1.075.195h.047a.975.975 0 0 0 .591-.893v-.1a1.182 1.182 0 1 1 2.364 0v.053a.975.975 0 0 0 .59.892.975.975 0 0 0 1.076-.195l.036-.035a1.182 1.182 0 1 1 1.672 1.672l-.035.036a.974.974 0 0 0-.196 1.075v.047a.974.974 0 0 0 .893.591h.1a1.182 1.182 0 0 1 0 2.364h-.053a.975.975 0 0 0-.892.59Z" />
+				</svg>
+			</button>
 		</header>
 
 		<webview id="webview" src="https://www.google.com"></webview>
